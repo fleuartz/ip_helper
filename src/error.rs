@@ -8,6 +8,9 @@ pub enum ProcessCommunicationError {
     CommandError(String),
     ThreadJoinError,
     MutexLockError,
+    ThreadPanicked,
+    TimeoutError,
+    ChannelDisconnected,
     // Other(String),
 }
 
@@ -18,6 +21,9 @@ impl fmt::Display for ProcessCommunicationError {
             ProcessCommunicationError::CommandError(msg) => write!(f, "Command Error: {}", msg),
             ProcessCommunicationError::ThreadJoinError => write!(f, "Thread Join Error"),
             ProcessCommunicationError::MutexLockError => write!(f, "Mutex Lock Error"),
+            ProcessCommunicationError::ThreadPanicked => write!(f, "Thread Panicked"),
+            ProcessCommunicationError::TimeoutError => write!(f, "Timeout Error"),
+            ProcessCommunicationError::ChannelDisconnected => write!(f, "Channel Disconnected"),
             // ProcessCommunicationError::Other(msg) => write!(f, "{}", msg),
         }
     }

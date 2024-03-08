@@ -1,9 +1,9 @@
-# Interactive問題補助ツール
-`mkfifo fifo && (python judge.py < fifo) | (./solver > fifo)` の代わり
+# Interactive問題デバッグ補助ツール
+`mkfifo fifo && (python judge.py < fifo) | (./solver > fifo)` の代わりです．
 
 ## 使用例
 ```
-$ ./interactive ./solve 'python judge.py'
+$ ip_helper ./solve 'python judge.py'
 [2 → 1] 39
 [1 → 2] 6
 [1 → 2] 19 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37
