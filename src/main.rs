@@ -126,7 +126,7 @@ impl ProcessCommunicator {
 #[structopt(name = "process_communicator")]
 struct Opt {
     /// Activate standard error capture
-    #[structopt(short, long)]
+    #[structopt(short = "e", long)]
     capture_errors: bool,
 
     /// Command 1 to execute

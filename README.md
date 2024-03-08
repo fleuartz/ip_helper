@@ -17,3 +17,26 @@ $ ip_helper ./solve 'python judge.py'
 [2 → 1] AC
 ```
 [使用問題](https://atcoder.jp/contests/abc337/tasks/abc337_e)
+
+```
+$ ip_helper -e ./solve 'python judge.py'
+[2 → 1] 34
+[1 → 2] ? 17
+[2 → 1] 1
+[Error][proc1] left: 1 | right: 17
+[1 → 2] ? 9
+[2 → 1] 0
+[Error][proc1] left: 9 | right: 17
+[1 → 2] ? 13
+[2 → 1] 0
+[Error][proc1] left: 13 | right: 17
+[1 → 2] ? 15
+[2 → 1] 1
+[Error][proc1] left: 13 | right: 15
+[1 → 2] ? 14
+[2 → 1] 0
+[1 → 2] ! 14
+[2 → 1] AC
+[2 → 1] Quary num: 6
+```
+[使用問題](https://atcoder.jp/contests/abc299/tasks/abc299_d)
