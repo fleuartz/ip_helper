@@ -95,7 +95,7 @@ impl ProcessCommunicator {
             let mut buf_reader = BufReader::new(reader);
             let mut line = String::new();
             while buf_reader.read_line(&mut line)? > 0 {
-                eprintln!("[Error][{}] {}", label, line.trim_end());
+                eprintln!("[  {}  ] {}", if label == "proc1" { 1 } else { 2 }, line.trim_end());
                 line.clear();
             }
             Ok(())
